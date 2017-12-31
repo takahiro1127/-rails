@@ -1,6 +1,7 @@
-class StaffMember < ActiveRecord::Base
+class Administrators < ActiveRecord::Base
+
   before_validation do
-    self.email_for_index = email.downcase if email
+  self.email_for_index = email.downcase if email
   end
 
   def password=(raw_password)
